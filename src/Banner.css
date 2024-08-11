@@ -1,0 +1,81 @@
+/* Banner.css */
+
+/* Ensure the banner occupies full width and half the height of the viewport */
+.banner {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  padding: 20px;
+  border: 1px solid #f5c6cb; /* Border color slightly darker than background */
+  border-radius: 5px;
+  width: 96vw; /* Full width of the viewport */
+  height: 30vh; /* Half height of the viewport */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  z-index: 1000; /* Ensure it's on top of other content */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between left and right content */
+  overflow: hidden; 
+}
+
+.banner .left-content {
+  flex: 1; /* Allow the left content to take up all available space */
+  text-align: left; /* Align text to the left */
+  padding-right: 20px; /* Add some space between the left and right content */
+  font-size: 2vw; /* Responsive font size relative to the viewport width */
+}
+
+.banner .right-content {
+  flex: 1; /* Allow the right content to take up all available space */
+  display: flex; /* Use Flexbox to align items */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-end; /* Align items to the right */
+  justify-content: center; /* Center content vertically */
+}
+
+.countdown-timer {
+  font-size: 10vw; /* Responsive font size for the countdown timer */
+  font-weight: bold; /* Bold font for emphasis */
+  /* color: #d9534f; Optional: Change color to a more noticeable red */
+  /* background-color: #fff; White background for the countdown box */
+  /* border: 1px solid #d9534f; Red border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding inside the box */
+  text-align: center; /* Center text horizontally */
+  width: 100%; /* Full width of the right content */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.banner h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 2.5vw; /* Dynamic font size for the heading */
+}
+
+.banner p {
+  margin: 0;
+  font-size: 2vw; /* Dynamic font size for the paragraph */
+}
+
+.banner a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #721c24; /* Dark red background */
+  color: #fff; /* White text */
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.banner a:hover {
+  background-color: #50171a; /* Darker red on hover */
+}
+
+/* Additional styling for the extra div */
+.banner div:nth-child(2) {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #721c24;
+  /* background-color: #f1b0b7; */
+  padding: 10px;
+  border-radius: 3px;
+}

@@ -1,0 +1,72 @@
+/* Dashboard.css */
+
+/* General dashboard styling as before */
+.dashboard {
+  width: 96vw;
+  background-color: #f8d7da; /* Match the banner's light red background */
+  padding: 20px;
+  border: 1px solid #f5c6cb; /* Border color matching the banner */
+  border-radius: 5px;
+   /* Slightly wider to match the banner's proportions */
+  margin: 20px auto; /* Center the dashboard */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  color: #721c24; /* Dark red text color to match the banner */
+}
+
+.dashboard h2 {
+  margin-top: 0;
+  font-size: 2.5vw; /* Dynamic font size matching the banner */
+  color: #721c24; /* Dark red text color */
+  text-align: left; /* Align heading to the left */
+}
+
+.dashboard label {
+  display: block;
+  margin-bottom: 15px; /* Spacing between form elements */
+  font-size: 2vw; /* Dynamic font size matching the banner */
+  color: #721c24; /* Dark red text color */
+}
+
+.dashboard input[type="text"],
+.dashboard input[type="number"],
+.dashboard input[type="url"],
+.dashboard input[type="checkbox"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 0px solid #f5c6cb; /* Border color matching the banner */
+  border-radius: 0px;
+  box-sizing: border-box; /* Include padding in width */
+  font-size: 1.8vw; /* Dynamic font size for inputs */
+  color: #721c24; /* Dark red text color */
+}
+
+.dashboard input[type="checkbox"] {
+  display: inline-block;
+  width: auto; /* Remove width constraint */
+  margin-right: 10px;
+  transform: scale(1.5); /* Make the checkbox larger */
+  accent-color: #721c24; /* Change checkbox color to match the banner */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.dashboard button {
+  padding: 10px 20px;
+  background-color: #721c24; /* Match banner's dark red background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 2vw; /* Dynamic font size for buttons */
+}
+
+.dashboard button:hover {
+  background-color: #50171a; /* Darker red on hover, matching banner */
+}
+
+.dashboard p {
+  font-size: 1.8vw; /* Dynamic font size for paragraphs */
+  color: #721c24; /* Dark red text color */
+}
