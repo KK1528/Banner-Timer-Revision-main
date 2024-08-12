@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dashboard from './Dashboard';
 import Banner from './Banner';
 
@@ -12,6 +12,20 @@ const App = () => {
     const handleTimerFinish = () => {
         setBannerData({ ...bannerData, visible: false });
     };
+
+    useEffect(() => {
+        const fetchBannerData = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/api/banner');
+                const data = await response.json();
+                setBannerData({ ...data, visible: false });
+            } catch (error) {
+                console.error('Error fetching banner data:', error);
+            }
+        };
+
+        fetchBannerData();
+    }, []);
 
     return (
         <div>

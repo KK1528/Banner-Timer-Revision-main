@@ -7,10 +7,22 @@ const Dashboard = ({ onBannerUpdate }) => {
     const [timer, setTimer] = useState(30);
     const [link, setLink] = useState('#');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsBannerVisible(true); // This will trigger the banner to show
-        onBannerUpdate({ description, timer, link });
+        setIsBannerVisible(true);
+
+        const bannerData = { description, timer, link };
+        onBannerUpdate(bannerData);
+
+        try {
+            await fetch('http://localhost:5000/api/banner', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bannerData),
+            });
+        } catch (error) {
+            console.error('Error saving banner data:', error);
+        }
     };
 
     return !isBannerVisible ? (
@@ -32,7 +44,7 @@ const Dashboard = ({ onBannerUpdate }) => {
                 <button type="submit">Update Banner</button>
             </form>
         </div>
-    ) : null; // Hide the dashboard once the banner is visible
+    ) : null;
 };
 
 export default Dashboard;
